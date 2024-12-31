@@ -2,9 +2,9 @@ import './Gallery.css'
 
 export default function Home() {
     return (
-      <div className="gallery-page">
+      <div className="Home-page">
         <header className="header">
-          <h1>Gallery</h1>
+          <h1>Home</h1>
           <a href="#profile">
             <img src="/src/assets/profile-icon.png" alt="Profile" />
             <span>Profile</span>

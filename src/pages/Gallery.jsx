@@ -1,6 +1,3 @@
-
-import { Link } from 'react-router-dom';
-
 import './Gallery.css'
 
 export default function Gallery() {
@@ -26,6 +23,12 @@ export default function Gallery() {
             <h3>First Year</h3>
             <p>Day one of the first year.</p>
             <div className="date">Date: December 22, 2024</div>
+          </div>
+          <div className="gallery-item">
+            <img src="/src/assets/B1.jpg" alt="Painting 1" />
+            <h3>First Month</h3>
+            <p>Day one of the first month.</p>
+            <div className="date">Date: December 20, 2024</div>
           </div>
         </main>
   
