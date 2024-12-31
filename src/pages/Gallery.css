@@ -1,0 +1,182 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(204, 204, 204);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the header and navbar stay at the extremes */
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gallery-page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures the gallery takes up remaining space */
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    overflow-y: auto;
+}
+
+.header {
+    background-color: rgb(3, 119, 145);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Keeps it above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.header h1 {
+    margin: 0;
+    color: black;
+    font-size: 18px;
+}
+
+.header a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.header span {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.gallery {
+    flex-grow: 1; /* Allow the gallery to take up remaining space */
+    width: 100%;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Items in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 15px; /* Space between items */
+    padding: 10px; /* Add some padding */
+    box-sizing: border-box;
+}
+
+.gallery-item {
+    background-color: rgb(199, 199, 199);
+    color: black;
+    width: 90%; /* Responsive width */
+    max-width: 350px; /* Limit maximum width */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text content */
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gallery-item h3 {
+    margin: 10px 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.gallery-item p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.gallery-item .date {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+.nav-bar {
+    background-color: rgb(3, 119, 145);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10; /* Keeps it above other content */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-top: 3px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    flex: 1;
+}
+
+.nav-bar a img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.nav-bar a span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .nav-bar a {
+        flex: 0 0 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar a img {
+        width: 25px;
+        height: 25px;
+    }
+}
